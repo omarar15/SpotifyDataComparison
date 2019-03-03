@@ -5,9 +5,53 @@
     <title>INFO 3300 HW4</title>
     <meta name="author" content="Omar Abdul-Rahim">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
   </head>
-  <body style="font-family: Lato; line-height: 2em; margin: 30px; color: #2b2b2b;">
-    <h1></h1>
+  <body>
+    <h1>What Is Your Music Like?</h1>
+    <h4>Omar Abdul-Rahim, Sheetal Athrey, Alexa Batino</h4>
+    <p class="description">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+    <div class="legend">
+      <span><strong>Legend:</strong></span>
+      <span class="dotUSA"></span>
+      <span>USA Top 100</span>
+      <span class="dotOmar"></span>
+      <span>Omar</span>
+      <span class="dotSheetal"></span>
+      <span>Sheetal</span>
+      <span class="dotAlexa"></span>
+      <span>Alexa</span>
+    </div>
+
+    <h3>Valence</h3>
+    <p>Pellentesque mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    <div class="graphs valence">
+      <svg id="omarValence" height="400px" width="400px"></svg>
+      <svg id="sheetalValence" height="400px" width="400px"></svg>
+      <svg id="alexaValence" height="400px" width="400px"></svg>
+    </div>
+    <p class="analysis">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+
+    <h3>Energy</h3>
+    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+    <div class="graphs energy">
+      <svg id="omarEnergy" height="400px" width="400px"></svg>
+      <svg id="sheetalEnergy" height="400px" width="400px"></svg>
+      <svg id="alexaEnergy" height="400px" width="400px"></svg>
+    </div>
+    <p class="analysis">Pellentesque mattis consectetur purus sit amet fermentum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+
+    <h3>Danceability</h3>
+    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.</p>
+    <div class="graphs danceability">
+      <svg id="omarDanceability" height="400px" width="400px"></svg>
+      <svg id="sheetalDanceability" height="400px" width="400px"></svg>
+      <svg id="alexaDanceability" height="400px" width="400px"></svg>
+    </div>
+    <p class="analysis">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+    <script src="spotifyViz.js"></script>
   </body>
 </html>
