@@ -153,8 +153,12 @@ svgD.forEach( (d,i) => {
 
 // Adding 2018 Spotify US Top 100 data
 d3.json("datasets/usa2018.json").then(function(data){
+  
   svgV.forEach( x => {
+    let usValenceSum = 0;
+
     data.forEach( (d,i) => {
+      usValenceSum = d.valence + usValenceSum;
       x.append("circle")
         .attr("cx", rankScale(i+1))
         .attr("cy", valueScale(d.valence))
@@ -162,11 +166,26 @@ d3.json("datasets/usa2018.json").then(function(data){
         .attr("fill", usaColor)
         .attr("opacity", pointOpacity)
         .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+      
     });
-  });
 
+    let usValenceAverage = usValenceSum / 100;
+    x.append("line")
+      .attr("x1", rankScale(rankMin))
+      .attr("x2", rankScale(rankMax))
+      .attr("y1", valueScale(usValenceAverage))
+      .attr("y2", valueScale(usValenceAverage))
+      .attr("opacity", 0.4)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+      .style("stroke-dasharray", ("7, 7"))
+      .style("stroke", usaColor)
+      .style("stroke-width", 2);
+  });
+  
   svgE.forEach( x => {
+    let usEnergySum = 0;
     data.forEach( (d,i) => {
+      usEnergySum = d.energy + usEnergySum;
       x.append("circle")
         .attr("cx", rankScale(i+1))
         .attr("cy", valueScale(d.energy))
@@ -175,10 +194,24 @@ d3.json("datasets/usa2018.json").then(function(data){
         .attr("opacity", pointOpacity)
         .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
     });
+
+    let usEnergyAverage = usEnergySum / 100;
+    x.append("line")
+      .attr("x1", rankScale(rankMin))
+      .attr("x2", rankScale(rankMax))
+      .attr("y1", valueScale(usEnergyAverage))
+      .attr("y2", valueScale(usEnergyAverage))
+      .attr("opacity", 0.4)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+      .style("stroke-dasharray", ("7, 7"))
+      .style("stroke", usaColor)
+      .style("stroke-width", 2);
   });
 
   svgD.forEach( x => {
+    let usDanceabilitySum = 0;
     data.forEach( (d,i) => {
+      usDanceabilitySum = d.danceability + usDanceabilitySum;
       x.append("circle")
         .attr("cx", rankScale(i+1))
         .attr("cy", valueScale(d.danceability))
@@ -187,12 +220,32 @@ d3.json("datasets/usa2018.json").then(function(data){
         .attr("opacity", pointOpacity)
         .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
     });
+
+    let usDanceabilityAverage = usDanceabilitySum / 100;
+    x.append("line")
+      .attr("x1", rankScale(rankMin))
+      .attr("x2", rankScale(rankMax))
+      .attr("y1", valueScale(usDanceabilityAverage))
+      .attr("y2", valueScale(usDanceabilityAverage))
+      .attr("opacity", 0.4)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+      .style("stroke-dasharray", ("7, 7"))
+      .style("stroke", usaColor)
+      .style("stroke-width", 2);
   });
 });
 
 // Adding Omar's 2018 Top 100 data
 d3.json("datasets/omar.json").then(function(data){
+  let vSum = 0;
+  let eSum = 0;
+  let dSum = 0;
+  
   data.forEach( (d,i) => {
+    vSum = d.valence + vSum;
+    eSum = d.energy + eSum;
+    dSum = d.danceability + dSum;
+
     svgOmarV.append("circle")
       .attr("cx", rankScale(i+1))
       .attr("cy", valueScale(d.valence))
@@ -217,11 +270,55 @@ d3.json("datasets/omar.json").then(function(data){
       .attr("opacity", pointOpacity)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
   })
+
+  let vAverage = vSum / 100;
+  let eAverage = eSum / 100;
+  let dAverage = dSum / 100;
+
+  svgOmarV.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(vAverage))
+    .attr("y2", valueScale(vAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", omarColor)
+    .style("stroke-width", 2);
+
+  svgOmarE.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(eAverage))
+    .attr("y2", valueScale(eAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", omarColor)
+    .style("stroke-width", 2);
+  
+  svgOmarD.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(dAverage))
+    .attr("y2", valueScale(dAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", omarColor)
+    .style("stroke-width", 2); 
 });
 
 // Adding Alexa's 2018 Top 100 data
 d3.json("datasets/alexa.json").then(function(data){
+  let vSum = 0;
+  let eSum = 0;
+  let dSum = 0;
+
   data.forEach( (d,i) => {
+    vSum = d.valence + vSum;
+    eSum = d.energy + eSum;
+    dSum = d.danceability + dSum;
     svgAlexaV.append("circle")
       .attr("cx", rankScale(i+1))
       .attr("cy", valueScale(d.valence))
@@ -246,4 +343,114 @@ d3.json("datasets/alexa.json").then(function(data){
       .attr("opacity", pointOpacity)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
   })
+  let vAverage = vSum / 100;
+  let eAverage = eSum / 100;
+  let dAverage = dSum / 100;
+
+  svgAlexaV.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(vAverage))
+    .attr("y2", valueScale(vAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", alexaColor)
+    .style("stroke-width", 2);
+
+  svgAlexaE.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(eAverage))
+    .attr("y2", valueScale(eAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", alexaColor)
+    .style("stroke-width", 2);
+  
+  svgAlexaD.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(dAverage))
+    .attr("y2", valueScale(dAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", alexaColor)
+    .style("stroke-width", 2);  
+
 });
+
+d3.json("datasets/sheetal.json").then(function(data){
+  let vSum = 0;
+  let eSum = 0;
+  let dSum = 0;
+
+  data.forEach( (d,i) => {
+    vSum = d.valence + vSum;
+    eSum = d.energy + eSum;
+    dSum = d.danceability + dSum;
+    svgSheetalV.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.valence))
+      .attr("r", pointRadius)
+      .attr("fill", sheetalColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+
+    svgSheetalE.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.energy))
+      .attr("r", pointRadius)
+      .attr("fill", sheetalColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+
+    svgSheetalD.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.danceability))
+      .attr("r", pointRadius)
+      .attr("fill", sheetalColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+  })
+  let vAverage = vSum / 100;
+  let eAverage = eSum / 100;
+  let dAverage = dSum / 100;
+
+  svgSheetalV.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(vAverage))
+    .attr("y2", valueScale(vAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", sheetalColor)
+    .style("stroke-width", 2);
+
+  svgSheetalE.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(eAverage))
+    .attr("y2", valueScale(eAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", sheetalColor)
+    .style("stroke-width", 2);
+  
+  svgSheetalD.append("line")
+    .attr("x1", rankScale(rankMin))
+    .attr("x2", rankScale(rankMax))
+    .attr("y1", valueScale(dAverage))
+    .attr("y2", valueScale(dAverage))
+    .attr("opacity", 0.4)
+    .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
+    .style("stroke-dasharray", ("7, 7"))
+    .style("stroke", sheetalColor)
+    .style("stroke-width", 2);  
+
+});
+
