@@ -218,3 +218,32 @@ d3.json("datasets/omar.json").then(function(data){
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
   })
 });
+
+// Adding Alexa's 2018 Top 100 data
+d3.json("datasets/alexa.json").then(function(data){
+  data.forEach( (d,i) => {
+    svgAlexaV.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.valence))
+      .attr("r", pointRadius)
+      .attr("fill", alexaColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+
+    svgAlexaE.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.energy))
+      .attr("r", pointRadius)
+      .attr("fill", alexaColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+
+    svgAlexaD.append("circle")
+      .attr("cx", rankScale(i+1))
+      .attr("cy", valueScale(d.danceability))
+      .attr("r", pointRadius)
+      .attr("fill", alexaColor)
+      .attr("opacity", pointOpacity)
+      .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
+  })
+});
