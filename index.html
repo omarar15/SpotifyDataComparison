@@ -7,9 +7,19 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style> 
+      h1 { 
+          text-shadow: 5px 5px 8px #32C1BA; 
+      } 
+
+      h3{
+        text-shadow: 1px 1px 2px #32C1BA;
+      }
+      </style> 
+  
   </head>
   <body>
-    <h1>What Is Your Music Like?</h1>
+    <h1> <b> What Is Your Music Like? </b></h1>
     <h4>Omar Abdul-Rahim, Sheetal Athrey, Alexa Batino</h4>
     <p class="description"> Through this visualization, we wish to compare the US Top 100 songs of 2018 with the Top 100 songs of 2018 for each group member. In our comparison we compare three features that Spotify highlights for every songs, that is the Valence measure, the Energy Measure and the Danceability measure. Through this, we can analyze the variation of every group members most listened to songs of 2018 from that of the US Top 100, and can also predict the kind of songs each member favors.</p>
 
@@ -25,7 +35,7 @@
       <span>Alexa</span>
     </div>
 
-    <h3>Valence</h3>
+    <h3> <b> Valence </b> - Music Positivity</h3>
     <p>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
     <div class="graphs valence">
       <svg id="omarValence" height="450px" width="400px"></svg>
