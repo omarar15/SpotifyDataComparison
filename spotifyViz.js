@@ -184,10 +184,10 @@ d3.json("datasets/usa2018.json").then(function(data){
     // Adding mean value under the graphs for each comparison 
     console.log(usValenceAverage)
     x.append("text")
-      .attr("x", rankScale(90) + margin.left)
+      .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
       .attr("font-size", "12px")
-      .text("US 2018 Mean: "+(usValenceAverage));
+      .text("US 2018 Mean: "+(usValenceAverage.toFixed(3)));
   });
   
   svgE.forEach( x => {
@@ -218,10 +218,10 @@ d3.json("datasets/usa2018.json").then(function(data){
     // Adding mean value under the graphs for each comparison 
     console.log(usEnergyAverage)
     x.append("text")
-      .attr("x", rankScale(90) + margin.left)
+      .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
       .attr("font-size", "12px")
-      .text("US 2018 Mean: "+(usEnergyAverage));
+      .text("US 2018 Mean: "+(usEnergyAverage.toFixed(3)));
   });
 
   svgD.forEach( x => {
@@ -252,10 +252,10 @@ d3.json("datasets/usa2018.json").then(function(data){
     // Adding mean value under the graphs for each comparison 
     console.log(usDanceabilityAverage)
     x.append("text")
-      .attr("x", rankScale(90) + margin.left)
+      .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
       .attr("font-size", "12px")
-      .text("US 2018 Mean: "+(usDanceabilityAverage));
+      .text("US 2018 Mean: "+(usDanceabilityAverage.toFixed(3)));
   });
 });
 
@@ -314,10 +314,10 @@ d3.json("datasets/omar.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(vAverage)
   svgOmarV.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Omar 2018 Mean: "+(vAverage));
+    .text("Omar 2018 Mean: "+(vAverage.toFixed(3)));
 
   svgOmarE.append("line")
     .attr("x1", rankScale(rankMin))
@@ -333,10 +333,10 @@ d3.json("datasets/omar.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(eAverage)
   svgOmarE.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Omar 2018 Mean: "+(eAverage));
+    .text("Omar 2018 Mean: "+(eAverage.toFixed(3)));
   
   svgOmarD.append("line")
     .attr("x1", rankScale(rankMin))
@@ -352,10 +352,10 @@ d3.json("datasets/omar.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(dAverage)
   svgOmarD.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Omar 2018 Mean: "+(dAverage));
+    .text("Omar 2018 Mean: "+(dAverage.toFixed(3)));
   
 });
 
@@ -411,10 +411,10 @@ d3.json("datasets/alexa.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(vAverage)
   svgAlexaV.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Alexa 2018 Mean: "+(vAverage));
+    .text("Alexa 2018 Mean: "+(vAverage.toFixed(3)));
   
   svgAlexaE.append("line")
     .attr("x1", rankScale(rankMin))
@@ -430,10 +430,10 @@ d3.json("datasets/alexa.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(eAverage)
   svgAlexaE.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Alexa 2018 Mean: "+(eAverage));
+    .text("Alexa 2018 Mean: "+(eAverage.toFixed(3)));
 
   svgAlexaD.append("line")
     .attr("x1", rankScale(rankMin))
@@ -449,10 +449,10 @@ d3.json("datasets/alexa.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(dAverage)
   svgAlexaD.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Alexa 2018 Mean: "+(dAverage));
+    .text("Alexa 2018 Mean: "+(dAverage.toFixed(3)));
 
 });
 
@@ -508,10 +508,10 @@ d3.json("datasets/sheetal.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(vAverage)
   svgSheetalV.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Sheetal 2018 Mean: "+(vAverage));
+    .text("Sheetal 2018 Mean: "+(vAverage.toFixed(3)));
 
   svgSheetalE.append("line")
     .attr("x1", rankScale(rankMin))
@@ -527,10 +527,10 @@ d3.json("datasets/sheetal.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(eAverage)
   svgSheetalE.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Sheetal 2018 Mean: "+(eAverage));
+    .text("Sheetal 2018 Mean: "+(eAverage.toFixed(3)));
   
   svgSheetalD.append("line")
     .attr("x1", rankScale(rankMin))
@@ -546,10 +546,10 @@ d3.json("datasets/sheetal.json").then(function(data){
   // Adding mean value under the graphs for each comparison 
   console.log(dAverage)
   svgSheetalD.append("text")
-    .attr("x", rankScale(90) + margin.left)
+    .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
     .attr("font-size", "12px")
-    .text("Sheetal 2018 Mean: "+(dAverage));
+    .text("Sheetal 2018 Mean: "+(dAverage.toFixed(3)));
 
 });
 
