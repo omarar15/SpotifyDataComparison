@@ -471,7 +471,7 @@ d3.json("datasets/sheetal.json").then(function(data){
       .attr("cy", valueScale(d.valence))
       .attr("r", pointRadius)
       .attr("fill", sheetalColor)
-      .attr("opacity", pointOpacity)
+      .attr("opacity", pointOpacity-0.1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
 
     svgSheetalE.append("circle")
@@ -479,7 +479,7 @@ d3.json("datasets/sheetal.json").then(function(data){
       .attr("cy", valueScale(d.energy))
       .attr("r", pointRadius)
       .attr("fill", sheetalColor)
-      .attr("opacity", pointOpacity)
+      .attr("opacity", pointOpacity-0.1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
 
     svgSheetalD.append("circle")
@@ -487,7 +487,7 @@ d3.json("datasets/sheetal.json").then(function(data){
       .attr("cy", valueScale(d.danceability))
       .attr("r", pointRadius)
       .attr("fill", sheetalColor)
-      .attr("opacity", pointOpacity)
+      .attr("opacity", pointOpacity-0.1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")");
   })
   let vAverage = vSum / 100;
@@ -499,7 +499,7 @@ d3.json("datasets/sheetal.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(vAverage))
     .attr("y2", valueScale(vAverage))
-    .attr("opacity", 1)
+    .attr("opacity", 1.2)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
@@ -518,7 +518,7 @@ d3.json("datasets/sheetal.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(eAverage))
     .attr("y2", valueScale(eAverage))
-    .attr("opacity", 1)
+    .attr("opacity", 1.2)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
@@ -537,7 +537,7 @@ d3.json("datasets/sheetal.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(dAverage))
     .attr("y2", valueScale(dAverage))
-    .attr("opacity", 1)
+    .attr("opacity", 1.2)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
