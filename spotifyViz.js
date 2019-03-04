@@ -20,7 +20,7 @@ let svgList = svgV.concat(svgE, svgD);
 // Establishing margins for plotting
 let width = 400;
 let height = 400;
-let margin = { "top": 35, "right": 25, "bottom": 50, "left": 60};
+let margin = { "top": 35, "right": 25, "bottom": 100, "left": 60};
 let chartWidth = width - margin.left - margin.right;
 let chartHeight = height - margin.top - margin.bottom;
 
@@ -30,7 +30,7 @@ omarColor = "#ed2939";
 sheetalColor = "#ffae42";
 alexaColor = "#4169e1";
 pointRadius = 3;
-pointOpacity = 0.7;
+pointOpacity = 0.5;
 
 // Creating scales
 const rankMin = 100;
@@ -175,11 +175,19 @@ d3.json("datasets/usa2018.json").then(function(data){
       .attr("x2", rankScale(rankMax))
       .attr("y1", valueScale(usValenceAverage))
       .attr("y2", valueScale(usValenceAverage))
-      .attr("opacity", 0.4)
+      .attr("opacity", 1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
       .style("stroke-dasharray", ("7, 7"))
       .style("stroke", usaColor)
-      .style("stroke-width", 2);
+      .style("stroke-width", 2.5);
+
+    // Adding mean value under the graphs for each comparison 
+    console.log(usValenceAverage)
+    x.append("text")
+      .attr("x", rankScale(90) + margin.left)
+      .attr("y", chartHeight + margin.top + 55)
+      .attr("font-size", "12px")
+      .text("US 2018 Mean: "+(usValenceAverage));
   });
   
   svgE.forEach( x => {
@@ -201,11 +209,19 @@ d3.json("datasets/usa2018.json").then(function(data){
       .attr("x2", rankScale(rankMax))
       .attr("y1", valueScale(usEnergyAverage))
       .attr("y2", valueScale(usEnergyAverage))
-      .attr("opacity", 0.4)
+      .attr("opacity", 1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
       .style("stroke-dasharray", ("7, 7"))
       .style("stroke", usaColor)
-      .style("stroke-width", 2);
+      .style("stroke-width", 2.5);
+
+    // Adding mean value under the graphs for each comparison 
+    console.log(usEnergyAverage)
+    x.append("text")
+      .attr("x", rankScale(90) + margin.left)
+      .attr("y", chartHeight + margin.top + 55)
+      .attr("font-size", "12px")
+      .text("US 2018 Mean: "+(usEnergyAverage));
   });
 
   svgD.forEach( x => {
@@ -227,13 +243,22 @@ d3.json("datasets/usa2018.json").then(function(data){
       .attr("x2", rankScale(rankMax))
       .attr("y1", valueScale(usDanceabilityAverage))
       .attr("y2", valueScale(usDanceabilityAverage))
-      .attr("opacity", 0.4)
+      .attr("opacity", 1)
       .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
       .style("stroke-dasharray", ("7, 7"))
       .style("stroke", usaColor)
-      .style("stroke-width", 2);
+      .style("stroke-width", 2.5);
+
+    // Adding mean value under the graphs for each comparison 
+    console.log(usDanceabilityAverage)
+    x.append("text")
+      .attr("x", rankScale(90) + margin.left)
+      .attr("y", chartHeight + margin.top + 55)
+      .attr("font-size", "12px")
+      .text("US 2018 Mean: "+(usDanceabilityAverage));
   });
 });
+
 
 // Adding Omar's 2018 Top 100 data
 d3.json("datasets/omar.json").then(function(data){
@@ -280,33 +305,58 @@ d3.json("datasets/omar.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(vAverage))
     .attr("y2", valueScale(vAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", omarColor)
-    .style("stroke-width", 2);
+    .style("stroke-width", 2.5);
+  
+  // Adding mean value under the graphs for each comparison 
+  console.log(vAverage)
+  svgOmarV.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Omar 2018 Mean: "+(vAverage));
 
   svgOmarE.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(eAverage))
     .attr("y2", valueScale(eAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", omarColor)
-    .style("stroke-width", 2);
+    .style("stroke-width", 2.5);
+  
+  // Adding mean value under the graphs for each comparison 
+  console.log(eAverage)
+  svgOmarE.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Omar 2018 Mean: "+(eAverage));
   
   svgOmarD.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(dAverage))
     .attr("y2", valueScale(dAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", omarColor)
-    .style("stroke-width", 2); 
+    .style("stroke-width", 2.5); 
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(dAverage)
+  svgOmarD.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Omar 2018 Mean: "+(dAverage));
+  
 });
 
 // Adding Alexa's 2018 Top 100 data
@@ -352,36 +402,61 @@ d3.json("datasets/alexa.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(vAverage))
     .attr("y2", valueScale(vAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", alexaColor)
-    .style("stroke-width", 2);
+    .style("stroke-width", 2.5);
 
+  // Adding mean value under the graphs for each comparison 
+  console.log(vAverage)
+  svgAlexaV.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Alexa 2018 Mean: "+(vAverage));
+  
   svgAlexaE.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(eAverage))
     .attr("y2", valueScale(eAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", alexaColor)
-    .style("stroke-width", 2);
-  
+    .style("stroke-width", 2.5);
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(eAverage)
+  svgAlexaE.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Alexa 2018 Mean: "+(eAverage));
+
   svgAlexaD.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(dAverage))
     .attr("y2", valueScale(dAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", alexaColor)
-    .style("stroke-width", 2);  
+    .style("stroke-width", 2.5);  
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(dAverage)
+  svgAlexaD.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Alexa 2018 Mean: "+(dAverage));
 
 });
 
+//Adding Sheetal's 2018 Top 100 data
 d3.json("datasets/sheetal.json").then(function(data){
   let vSum = 0;
   let eSum = 0;
@@ -424,33 +499,57 @@ d3.json("datasets/sheetal.json").then(function(data){
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(vAverage))
     .attr("y2", valueScale(vAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
-    .style("stroke-width", 2);
+    .style("stroke-width", 2.5);
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(vAverage)
+  svgSheetalV.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Sheetal 2018 Mean: "+(vAverage));
 
   svgSheetalE.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(eAverage))
     .attr("y2", valueScale(eAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
-    .style("stroke-width", 2);
+    .style("stroke-width", 2.5);
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(eAverage)
+  svgSheetalE.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Sheetal 2018 Mean: "+(eAverage));
   
   svgSheetalD.append("line")
     .attr("x1", rankScale(rankMin))
     .attr("x2", rankScale(rankMax))
     .attr("y1", valueScale(dAverage))
     .attr("y2", valueScale(dAverage))
-    .attr("opacity", 0.4)
+    .attr("opacity", 1)
     .attr("transform","translate("+ (margin.left) +","+ margin.top +")")
     .style("stroke-dasharray", ("7, 7"))
     .style("stroke", sheetalColor)
-    .style("stroke-width", 2);  
+    .style("stroke-width", 2.5);  
+
+  // Adding mean value under the graphs for each comparison 
+  console.log(dAverage)
+  svgSheetalD.append("text")
+    .attr("x", rankScale(90) + margin.left)
+    .attr("y", chartHeight + margin.top + 75)
+    .attr("font-size", "12px")
+    .text("Sheetal 2018 Mean: "+(dAverage));
 
 });
 
