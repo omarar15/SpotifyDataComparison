@@ -182,7 +182,6 @@ d3.json("datasets/usa2018.json").then(function(data){
       .style("stroke-width", 2.5);
 
     // Adding mean value under the graphs for each comparison 
-    console.log(usValenceAverage)
     x.append("text")
       .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
@@ -216,7 +215,6 @@ d3.json("datasets/usa2018.json").then(function(data){
       .style("stroke-width", 2.5);
 
     // Adding mean value under the graphs for each comparison 
-    console.log(usEnergyAverage)
     x.append("text")
       .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
@@ -250,7 +248,6 @@ d3.json("datasets/usa2018.json").then(function(data){
       .style("stroke-width", 2.5);
 
     // Adding mean value under the graphs for each comparison 
-    console.log(usDanceabilityAverage)
     x.append("text")
       .attr("x", rankScale(70) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
@@ -312,7 +309,6 @@ d3.json("datasets/omar.json").then(function(data){
     .style("stroke-width", 2.5);
   
   // Adding mean value under the graphs for each comparison 
-  console.log(vAverage)
   svgOmarV.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -331,7 +327,6 @@ d3.json("datasets/omar.json").then(function(data){
     .style("stroke-width", 2.5);
   
   // Adding mean value under the graphs for each comparison 
-  console.log(eAverage)
   svgOmarE.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -350,7 +345,6 @@ d3.json("datasets/omar.json").then(function(data){
     .style("stroke-width", 2.5); 
 
   // Adding mean value under the graphs for each comparison 
-  console.log(dAverage)
   svgOmarD.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -409,7 +403,6 @@ d3.json("datasets/alexa.json").then(function(data){
     .style("stroke-width", 2.5);
 
   // Adding mean value under the graphs for each comparison 
-  console.log(vAverage)
   svgAlexaV.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -428,7 +421,6 @@ d3.json("datasets/alexa.json").then(function(data){
     .style("stroke-width", 2.5);
 
   // Adding mean value under the graphs for each comparison 
-  console.log(eAverage)
   svgAlexaE.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -447,7 +439,6 @@ d3.json("datasets/alexa.json").then(function(data){
     .style("stroke-width", 2.5);  
 
   // Adding mean value under the graphs for each comparison 
-  console.log(dAverage)
   svgAlexaD.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -506,7 +497,6 @@ d3.json("datasets/sheetal.json").then(function(data){
     .style("stroke-width", 2.5);
 
   // Adding mean value under the graphs for each comparison 
-  console.log(vAverage)
   svgSheetalV.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -525,7 +515,6 @@ d3.json("datasets/sheetal.json").then(function(data){
     .style("stroke-width", 2.5);
 
   // Adding mean value under the graphs for each comparison 
-  console.log(eAverage)
   svgSheetalE.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
@@ -544,7 +533,6 @@ d3.json("datasets/sheetal.json").then(function(data){
     .style("stroke-width", 2.5);  
 
   // Adding mean value under the graphs for each comparison 
-  console.log(dAverage)
   svgSheetalD.append("text")
     .attr("x", rankScale(70) + margin.left)
     .attr("y", chartHeight + margin.top + 75)
