@@ -185,7 +185,7 @@ d3.json("datasets/usa2018.json").then(function(data){
     x.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 55)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", usaColor)
       .text("U.S. 2018 Mean: "+(usValenceAverage.toFixed(3)));
@@ -220,7 +220,7 @@ d3.json("datasets/usa2018.json").then(function(data){
     x.append("text")
       .attr("x", rankScale(50) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
-      .attr("font-size", "10px")
+      .attr("font-size", "13px")
       .attr("text-anchor", "middle")
       .attr("fill", usaColor)
       .text("U.S. 2018 Mean: "+(usEnergyAverage.toFixed(3)));
@@ -255,7 +255,7 @@ d3.json("datasets/usa2018.json").then(function(data){
     x.append("text")
       .attr("x", rankScale(50) + margin.left)
       .attr("y", chartHeight + margin.top + 55)
-      .attr("font-size", "10px")
+      .attr("font-size", "13px")
       .attr("text-anchor", "middle")
       .attr("fill", usaColor)
       .text("U.S. 2018 Mean: "+(usDanceabilityAverage.toFixed(3)));
@@ -318,7 +318,7 @@ d3.json("datasets/omar.json").then(function(data){
   svgOmarV.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", omarColor)
     .text("Omar Mean: "+(vAverage.toFixed(3)));
@@ -338,7 +338,7 @@ d3.json("datasets/omar.json").then(function(data){
   svgOmarE.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", omarColor)
     .text("Omar Mean: "+(eAverage.toFixed(3)));
@@ -358,7 +358,7 @@ d3.json("datasets/omar.json").then(function(data){
   svgOmarD.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", omarColor)
     .text("Omar Mean: "+(dAverage.toFixed(3)));
@@ -418,7 +418,7 @@ d3.json("datasets/alexa.json").then(function(data){
   svgAlexaV.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", alexaColor)
     .text("Alexa Mean: "+(vAverage.toFixed(3)));
@@ -438,7 +438,7 @@ d3.json("datasets/alexa.json").then(function(data){
   svgAlexaE.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", alexaColor)
     .text("Alexa Mean: "+(eAverage.toFixed(3)));
@@ -458,7 +458,7 @@ d3.json("datasets/alexa.json").then(function(data){
   svgAlexaD.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", alexaColor)
     .text("Alexa Mean: "+(dAverage.toFixed(3)));
@@ -518,7 +518,7 @@ d3.json("datasets/sheetal.json").then(function(data){
   svgSheetalV.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", sheetalColor)
     .text("Sheetal Mean: "+(vAverage.toFixed(3)));
@@ -538,7 +538,7 @@ d3.json("datasets/sheetal.json").then(function(data){
   svgSheetalE.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", sheetalColor)
     .text("Sheetal Mean: "+(eAverage.toFixed(3)));
@@ -558,7 +558,7 @@ d3.json("datasets/sheetal.json").then(function(data){
   svgSheetalD.append("text")
     .attr("x", rankScale(50) + margin.left)
     .attr("y", chartHeight + margin.top + 70)
-    .attr("font-size", "10px")
+    .attr("font-size", "13px")
     .attr("text-anchor", "middle")
     .attr("fill", sheetalColor)
     .text("Sheetal Mean: "+(dAverage.toFixed(3)));
