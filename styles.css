@@ -16,7 +16,7 @@ div.header {
 }
 
 div.headText {
-  width: 950px;
+  width: 650px;
   margin-left: 100px;
   top: 150px;
   position: absolute;
@@ -27,14 +27,12 @@ h1, h3, h4 {
 }
 
 h1 {
-  text-align: center;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 56px;
 }
 
 h4 {
-  text-align: center;
   margin-top: 0;
   font-size: 18px;
 }
@@ -42,13 +40,11 @@ h4 {
 h3 {
   text-align: center;
   font-size: 28px;
-  text-shadow: 1px 1px 2px #304afb;
 }
 
 p.description {
-  text-align: center;
+  margin: 0;
   line-height: 1.5em;
-  width: 950px;
 }
 
 img {
