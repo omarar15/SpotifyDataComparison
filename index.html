@@ -2,65 +2,67 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>INFO 3300 HW4</title>
+    <title>INFO 3300 | What Is Your Music Like?</title>
     <meta name="author" content="Omar Abdul-Rahim">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <style> 
-      h1 { 
-          text-shadow: 5px 5px 8px #32C1BA; 
-      } 
-
-      h3{
-        text-shadow: 1px 1px 2px #32C1BA;
-      }
-      </style> 
-  
   </head>
   <body>
-    <h1> <b> What Is Your Music Like? </b></h1>
-    <h4>Omar Abdul-Rahim, Sheetal Athrey, Alexa Batino</h4>
-    <p class="description"> Through this visualization, we wish to compare the US Top 100 songs of 2018 with the Top 100 songs of 2018 for each group member. In our comparison we compare three features that Spotify highlights for every songs, that is the Valence measure, the Energy Measure and the Danceability measure. Through this, we can analyze the variation of every group members most listened to songs of 2018 from that of the US Top 100, and can also predict the kind of songs each member favors.</p>
-
-    <div class="legend">
-      <span><strong>Legend:</strong></span>
-      <span class="dotUSA"></span>
-      <span>USA Top 100</span>
-      <span class="dotOmar"></span>
-      <span>Omar</span>
-      <span class="dotSheetal"></span>
-      <span>Sheetal</span>
-      <span class="dotAlexa"></span>
-      <span>Alexa</span>
+    <div class="header">
+      <div class="headText">
+        <h1>What Is Our Music Like?</h1>
+        <h4>Omar Abdul-Rahim, Sheetal Athrey, Alexa Batino</h4>
+        <p class="description"> In this data visualization, we compare the musical sentiment of each of our top 100 songs of 2018 with Spotify's 2018 U.S. Top 100 . In our comparison, we compare three audio features provided by Spotify: valence, energy, and danceability. In doing this analysis, we learn about our own musical behavior and variation in comparison to the popular preferences of music listeners across the United States.</p>
+      </div>
+      <img src="us.png" alt="Animated drawing of Sheetal, Omar, and Alexa">
     </div>
 
-    <h3> <b> Valence </b> - Music Positivity</h3>
-    <p>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
-    <div class="graphs valence">
-      <svg id="omarValence" height="450px" width="400px"></svg>
-      <svg id="sheetalValence" height="450px" width="400px"></svg>
-      <svg id="alexaValence" height="450px" width="400px"></svg>
-    </div>
-    <p class="analysis">The class analysis for the Valence measure tells us that for all the three group members we see that their means lay lower than that of the US Top 2018 mean. Omar's mean lays a lot lower, with a greater difference between his mean and that of the US Top 2018, whereas Alexa and Sheetal are super close to the mean of the US Top 2018.</p>
+    <div class="container">
+      <div class="legend">
+        <div class="legContent">
 
-    <h3>Energy</h3>
-    <p>A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. </p>
-    <div class="graphs energy">
-      <svg id="omarEnergy" height="450px" width="400px"></svg>
-      <svg id="sheetalEnergy" height="450px" width="400px" ></svg>
-      <svg id="alexaEnergy" height="450px" width="400px"></svg>
-    </div>
-    <p class="analysis">The class analysis for the Energy measure contains an interesting behavior because Omar and Alexa both have their mean energy values lying a lot lower than that of the US Top 2018, but Sheetal's mean energy value is slightly above that of the US Top 2018.</p>
+        </div>
+        <span><strong>Legend:</strong></span>
+        <span class="dotUSA"></span>
+        <span>USA Top 100</span>
+        <span class="dotOmar"></span>
+        <span>Omar</span>
+        <span class="dotSheetal"></span>
+        <span>Sheetal</span>
+        <span class="dotAlexa"></span>
+        <span>Alexa</span>
+      </div>
 
-    <h3>Danceability</h3>
-    <p>Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable. </p>
-    <div class="graphs danceability">
-      <svg id="omarDanceability" height="450px" width="400px" ></svg>
-      <svg id="sheetalDanceability" height="450px" width="400px" ></svg>
-      <svg id="alexaDanceability" height="450px" width="400px"></svg>
+      <h3>Valence (Positivity)</h3>
+      <p>A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
+      <div class="graphs valence">
+        <svg id="omarValence" height="400px" width="400px"></svg>
+        <svg id="sheetalValence" height="400px" width="400px"></svg>
+        <svg id="alexaValence" height="400px" width="400px"></svg>
+      </div>
+      <p class="analysis">The class analysis for the Valence measure tells us that for all the three group members we see that their means lay lower than that of the US Top 2018 mean. Omar's mean lays a lot lower, with a greater difference between his mean and that of the US Top 2018, whereas Alexa and Sheetal are super close to the mean of the US Top 2018.</p>
+
+      <h3>Energy</h3>
+      <p>A measure from 0.0 to 1.0 that represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. </p>
+      <div class="graphs energy">
+        <svg id="omarEnergy" height="400px" width="400px"></svg>
+        <svg id="sheetalEnergy" height="400px" width="400px" ></svg>
+        <svg id="alexaEnergy" height="400px" width="400px"></svg>
+      </div>
+      <p class="analysis">The class analysis for the Energy measure contains an interesting behavior because Omar and Alexa both have their mean energy values lying a lot lower than that of the US Top 2018, but Sheetal's mean energy value is slightly above that of the US Top 2018.</p>
+
+      <h3>Danceability</h3>
+      <p>Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable. </p>
+      <div class="graphs danceability">
+        <svg id="omarDanceability" height="400px" width="400px" ></svg>
+        <svg id="sheetalDanceability" height="400px" width="400px" ></svg>
+        <svg id="alexaDanceability" height="400px" width="400px"></svg>
+      </div>
+      <p class="analysis">The class analysis for the Danceability measure tells us that for all the three group members we see that their means lay lower than that of the US Top 2018 mean. All there group members have nearly the same difference between their Mean Danceability Values and that of the US Top 2018.</p>
     </div>
-    <p class="analysis">The class analysis for the Danceability measure tells us that for all the three group members we see that their means lay lower than that of the US Top 2018 mean. All there group members have nearly the same difference between their Mean Danceability Values and that of the US Top 2018.</p>
+
+    <p class="humaaans">Illustration made in part by <a href="http://humaaans.com/">Humaaans</a></p>
 
     <script src="spotifyViz.js"></script>
   </body>
