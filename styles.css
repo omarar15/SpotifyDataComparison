@@ -80,6 +80,16 @@ div.legContent {
   padding-top: 15px;
 }
 
+div.boxes{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height:auto;
+  width:auto;
+  margin: 90px auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .dotUSA {
   height: 12px;
   width: 12px;
