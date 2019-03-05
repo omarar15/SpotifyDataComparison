@@ -13,10 +13,11 @@ div.header {
   background: #2D40FF;
   color: white;
   height: 540px;
+  width: auto;
 }
 
 div.headText {
-  width: 650px;
+  width: auto;
   margin-left: 100px;
   top: 150px;
   position: absolute;
@@ -45,6 +46,7 @@ h3 {
 p.description {
   margin: 0;
   line-height: 1.5em;
+  width: auto;
 }
 
 img {
